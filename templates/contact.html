@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block saturs %}
+
+<html>
+  <head>
+    <title>My super pagez</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    <h1>This is contact page!</h2>
+    <p>Contact me: {{ phone }}</p>
+  </body>
+</html>
+
+{% endblock %}
