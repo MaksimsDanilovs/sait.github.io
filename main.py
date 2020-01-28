@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -22,5 +22,10 @@ def about():
 def contact():
   return render_template('contact.html', phone = "3214532")
 
+@app.route('/params')
+def params():
+  return request.args
+
 
 app.run(host = '0.0.0.0', port = 8020)
+
